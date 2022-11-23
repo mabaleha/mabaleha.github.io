@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>VIDEO CHAT</title>
+        <link rel="stylesheet" href="css/style.css">
+
+        <style>
+        body{
+            background: skyblue;
+            background-repeat: no-repeat;
+        }
+        .dropdown{
+            margin: 0 auto;
+        }
+        nav{
+            height: 60px;
+            background:black;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+
+        }
+        .logo{
+            padding: 5px 0 0 80px;
+            width: 150px;
+            height: auto;
+        }
+        nav ul{
+            padding: 0px;
+            margin: 0px;
+            float: right;
+            margin-right: 80px;
+        }
+        nav ul li{
+            background: black;
+            position: relative;
+            list-style: none;
+            display: inline-block;
+        }
+        nav ul li a{
+            display: block;
+            padding: 0 15px;
+            color: white;
+            text-decoration: none;
+            line-height: 60px;
+        }
+        nav ul li a:hover{
+            background: green;
+
+        }
+        nav ul ul{
+            position: absolute;
+            top: 60px;
+            display: none;
+        }
+        nav ul li:hover > ul{
+            display: block;
+        }
+        nav ul ul li{
+            width: 160px;
+            float: none;
+            display: list-item;
+            position: relative;
+        }
+        nav ul ul ul li{
+            position: relative;
+            top: -40px;
+            letter:150px;
+        }
+        .body{
+            padding: 0 20px;
+        }
+        .body img{
+            width: 500px;
+            max-width: 400px;
+            margin-left: 360px;
+        }
+        .body p{
+            text-align: justify;
+        }
+
+        h1{
+            background: skyblue;
+     }
+  blockquote {   
+ float: right;  
+   width: 475px;  
+     font-size: 130%; 
+       font-style: italic;  
+         font-family: Georgia, Times, serif;  
+           margin: 0px 0px 10px 10px;  
+             padding: 8px;   
+              border-top: 1px solid #665544;  
+                border-bottom: 1px solid #665544;
+            }
+    .g{
+        background: white;
+        margin-left: 200px;
+    }
+    
+    .h{
+        background: white;
+        margin-left: 200px;
+    }
+    .im{
+        float: left;
+        margin-left: 10px;
+        margin-top: -150px;
+
+    }
+
+    @media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+    
+
+    </style>
+</head>
+
+<body>
+
+    <div class="dropdown">
+    <nav>
+    
+ <ul>
+        
+		<li><a href="index.html"><i class="fa fa-home">  Home</i></a></li>
+		<li><a href="mapoteng.html"><i class="fa fa-globe">  PROGRAMS</i></a>
+			<ul>
+				<li><a href="format.html">Interaction_Design</a></li>
+				<li><a href="format1.html">Data_Warehouse</a></li>
+				<li><a href="format2.html">Software_Engineering</a></li>
+				<li><a href="format3.html">Discrete_Maths</a></li>
+				<li><a href="format4.html">Java_Programming_2</a></li>
+			</ul>
+			</li>
+		<li><a href="lesotho.html"><i class="fa fa-book"> BOOKS</i></a></li>
+		<li><a href="about.html"><i class="fa fa-group"> About</i></a></li>
+	</ul>
+        <div class="logo">
+     <img src="limks.png" width="120" height="50">
+</div>
+    </nav>  
+    </div>
+    
+        <div class="navbar">
+            <center><h1>Local Client</h1></center>
+        </div>
+
+<h3 class="h" style="margin-left: 10px"><font color="red">WARNING !!:</font> After Clicking "CONNECT" please Activate Your URL browser, then click "ENTER"</h3>
+
+        <div class="top-container">
+           <center><video controls id="video" >Stream no available..</video></center> 
+            </div>
+ <div class="top-container">
+           <video controls id="video" style="margin-top: -400px" >Stream no available..</video>
+            </div>
+            <form action="https://meet.jit.si/PeacefulAcademiesRelateMagnificently.html" method="post">
+            <CENTER><font size="20"><button id="btn" value="submit" style="color: red" ><A HREF="https://meet.jit.si/PeacefulAcademiesRelateMagnificently.html"> <b>Connect </b></A></button></font></CENTER>
+
+</form>
+        <script>
+            //global variable
+let width  =670,
+    height = 0,
+    filter = 'none',
+    streaming = false;
+
+    //Dom Elements
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const photos = document.getElementById('photos');
+    const photoButton = document.getElementById('photo-button');
+    const clearButton = document.getElementById('clear-button');
+    const photoFilter = document.getElementById('photo-filter');
+
+    // Get media stream
+    navigator.mediaDevices.getUserMedia({video: true, audio: true}
+        )
+        .then(function(stream) {
+            //link to the video
+            video.srcObject =stream;
+            //play video
+            video.play();
+        })
+        .catch(function(err){
+            console.log('Error: ${err}');
+        });
+
+        //Play when ready
+        video.addEventListener('canplay',function(e){
+            if(!streaming){
+                //set video / canvas height
+                height = video.videoHeight / (video.videoWidth / width);
+               
+                video.setAttribute('width', width);
+                video.setAttribute('height', height);
+                canvas.setAttribute('width', width);
+                canvas.setAttribute('height', height);
+
+                streaming = true;
+            }
+        }, false);
+
+        
+        </script>
+    </body>
+</html>

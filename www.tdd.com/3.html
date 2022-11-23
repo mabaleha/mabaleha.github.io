@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interaction</title>
+
+    <style>
+    body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+
+  </head>
+  
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About:</a>
+  <a href="1.html">Chap 1</a>
+  <a href="2.html">Chap 2</a>
+  <a href="3.html">Chap 3</a>
+  <a href="4.html">Chap 4</a>
+  <a href="5.html">Chap 5</a>
+  <a href="6.html">Chap 6</a>
+  <a href="7.html">Chap 7</a>
+  <a href="8.html">Chap 8</a>
+  <a href="9.html">Chap 9</a>
+  <a href="10.html">Chap 10</a>
+  <a href="mapoteng.html"><b>login</b></a>
+</div>
+
+    <div id="main">
+  <h1>Data Warehousing</h1>
+  <p>Click on the element below to open the slides menu, and select an appropriete Chapter(Chap) to read / know about.</p>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+    
+<p>Read downloaded PDF from </p>
+ <iframe src="3.pdf" width="80%" height="550px">
+    </iframe>
+
+<h1>Read from internate</h1>
+    <p>Open a PDF file <a href="https://positivepsychology.com/positive-psychology-pdf/">example</a>.</p>
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+  </body>
+</html>

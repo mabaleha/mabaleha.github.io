@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TDD VIDEO CHAT</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxthcwp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dq81WUE00s/" crossorigin="anonymous">
+	<style>
+		body{
+			background: skyblue;
+			background-repeat: no-repeat;
+		}
+		.dropdown{
+			margin: 0 auto;
+		}
+		nav{
+			height: 60px;
+			background:black;
+			box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+
+		}
+		.logo{
+			padding: 5px 0 0 80px;
+			width: 150px;
+			height: auto;
+		}
+		nav ul{
+			padding: 0px;
+			margin: 0px;
+			float: right;
+			margin-right: 80px;
+		}
+		nav ul li{
+			background: black;
+			position: relative;
+			list-style: none;
+			display: inline-block;
+		}
+		nav ul li a{
+			display: block;
+			padding: 0 15px;
+			color: white;
+			text-decoration: none;
+			line-height: 60px;
+		}
+		nav ul li a:hover{
+			background: green;
+
+		}
+		nav ul ul{
+			position: absolute;
+			top: 60px;
+			display: none;
+		}
+		nav ul li:hover > ul{
+			display: block;
+		}
+		nav ul ul li{
+			width: 160px;
+			float: none;
+			display: list-item;
+			position: relative;
+		}
+		nav ul ul ul li{
+			position: relative;
+			top: -40px;
+			letter:150px;
+		}
+		.body{
+			padding: 0 20px;
+		}
+		.body img{
+			width: 300px;
+			max-width: 700px;
+			margin: 20px 0;
+		}
+		.body p{
+			text-align: justify;
+		}
+
+		h1{
+			background: gray;
+
+}
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: red;}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: black;
+}
+
+.newspaper {
+  column-count: 3;
+  column-gap: 40px;
+  column-rule-style: solid;
+}
+
+  .active {
+  background-color: #4CAF50;
+}
+	</style>
+</head>
+
+<body>
+
+	<div class="dropdown">
+	<nav>
+ <ul>
+		<li><a class="active" href="about.html"><i class="fa fa-group"> About</i></a></li>
+	</ul>
+		
+	</ul>
+	    <div class="logo">
+     <img src="limks.png" width="120" height="50">
+</div>
+	</nav>	
+	</div>
+<p><a href="https://youtube.com/"><center><h1>Download and Watch The  Tutorials here........</h1></center></a></p>
+
+<nav>
+	<ul>
+	<li><a href="index1.html"><i class="fa fa-home">  Home</i></a></li>
+	</ul>
+	<li><button class="tablink" onclick="openPage('Home', this, 'red')">Time_Table</button></a></li>
+</nav>
+
+
+<div id="Home" class="tabcontent">
+  <center><h1>BSSMY3S1</h1></center>
+  <div style="overflow-x:auto;">
+  	<br><br>
+  <table>
+    <tr>
+
+      <th></th>
+      <th>Interaction Design</th>
+      <th>Software Engineering</th>
+      <th>Discrete Maths</th>
+      <th>Data Warehouse</th>
+      <th>Computer Graphics</th>
+      <th>Java 2</th>
+      <th>Test 1</th>
+      <th>Test 2</th>
+      <th>Midterm</th>
+      <th>Final Exams</th>
+      <th>Gratulate Year</th>
+    </tr>
+    <tr>
+      <td><b>Lecture Name:</b></td>
+      <td>'Me Skopo'</td>
+      <td>'Me Mpho'</td>
+      <td>Mr Liphoto</td>
+      <td>'Me Mahlakeng'</td>
+      <td>Mr Sebotsa</td>
+      <td>Mr Maphatsoe</td>
+      <td>10%</td>
+      <td>15%</td>
+      <td>25%</td>
+      <td>60%</td>
+      <td>2022</td>
+    </tr>
+    <tr>
+      <td><b>WEEK:</b></td>
+      <td>Wensday</td>
+      <td>Tuesday</td>
+      <td>Monday</td>
+      <td>Wednesday</td>
+      <td>Tuesday</td>
+      <td>Friday</td>
+      <td>10%</td>
+      <td>15%</td>
+      <td>25%</td>
+      <td>60%</td>
+      <td>2022</td>
+    </tr>
+    <tr>
+      <td><b>Time:</b></td>
+      <td>8.00am  - 11.00pm</td>
+      <td>11.00am  - 14.00pm</td>
+      <td>10.00am  - 14.00pm</td>
+      <td>9.00am  - 13.00pm</td>
+      <td>11.00am  - 11.00pm</td>
+      <td>9.00am  - 13.00pm</td>
+      <td>10%</td>
+      <td>15%</td>
+      <td>25%</td>
+      <td>60%</td>
+      <td>2022</td>
+    </tr>
+  </table>
+</div>
+<br><br>
+  <center><a href="about.html"><b><font color="white">Exit</font></b></a></center>
+</div>
+
+<br><br>
+<video controls width="50%" height="40%">
+	<source src="videoplayback (13).mp4" type="video/mp4">
+</video>
+
+<br><br>
+<h1><center>Everyone needs some inspiration, So read on and let them inspire you.</center></h1>
+<div class="newspaper">
+<h3><p>1. "If you want to achieve greatness stop asking for permission." --Anonymous
+2. "Things work out best for those who make the best of how things work out." --John Wooden
+3. "To live a creative life, we must lose our fear of being wrong." --Anonymous </p>
+	<p>4. "Success is walking from failure to failure with no loss of enthusiasm." --Winston Churchill
+5. "Just when the caterpillar thought the world was ending, he turned into a butterfly." --Proverb
+6. "Successful entrepreneurs are givers and not takers of positive energy." --Anonymous</p>
+	<p> 7. "Whenever you see a successful person you only see the public glories, never the private sacrifices to reach them." --Vaibhav Shah
+8. "Opportunities don't happen, you create them." --Chris Grosser
+9. "Try not to become a person of success, but rather try to become a person of value." --Albert Einstein</p></h3>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>

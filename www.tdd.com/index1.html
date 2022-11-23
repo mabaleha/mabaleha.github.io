@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TDD VIDEO CHAT</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxthcwp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dq81WUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<style>
+		body{
+			background-image: url(lik.JPG);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+		}
+		.dropdown{
+			margin: 0 auto;
+
+		}
+		nav{
+			height: 65px;
+			background:black;
+			box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+
+		}
+		.logo{
+			padding: 0px 0 0 80px;
+			width: 150px;
+			height: auto;
+		}
+		nav ul{
+			padding: 0px;
+			margin: 0px;
+			float: right;
+			margin-right: 80px;
+		}
+		nav ul li{
+			background: black;
+			position: relative;
+			list-style: none;
+			display: inline-block;
+		}
+		nav ul li a{
+			display: block;
+			padding: 0 15px;
+			color: white;
+			text-decoration: none;
+			line-height: 60px;
+		}
+		nav ul li a:hover{
+			background: green;
+
+		}
+		nav ul ul{
+			position: absolute;
+			top: 60px;
+			display: none;
+		}
+		nav ul li:hover > ul{
+			display: block;
+		}
+		nav ul ul li{
+			width: 160px;
+			float: none;
+			display: list-item;
+			position: relative;
+		}
+		nav ul ul ul li{
+			position: relative;
+			top: -40px;
+			letter:150px;
+		}
+		.body{
+			padding: 0 20px;
+		}
+		.body img{
+			width: 500px;
+			max-width: 400px;
+			margin-left: 360px;
+		}
+		.body p{
+			text-align: justify;
+		}
+
+		h1{
+			background: skyblue;
+     }
+  blockquote {   
+ float: right;  
+   width: 475px;  
+     font-size: 130%; 
+       font-style: italic;  
+         font-family: Georgia, Times, serif;  
+           margin: 0px 0px 10px 10px;  
+             padding: 8px;   
+              border-top: 1px solid #665544;  
+                border-bottom: 1px solid #665544;
+            }
+    .g{
+    	background: white;
+    	margin-left: 200px;
+    }
+    .im{
+    	float: left;
+    	margin-left: 10px;
+    	margin-top: -150px;
+
+    }
+
+    * {
+  box-sizing: border-box;
+}
+
+    @media only screen and (max-width:800px) {
+  /* For tablets: */
+  .body img {
+    width: 80%;
+    padding: 0;
+  }
+  .g {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .body img, .g {
+    width: 100%;
+  }
+}
+
+
+h4 {
+  text-shadow: 0 0 3px #FF0000;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+	</style>
+</head>
+
+<body>
+
+
+	<div class="dropdown">
+	<nav>
+ <ul>
+		<li><a class="active" href="index.html"><i class="fa fa-home">  Home</i></a></li>
+		<li><a href="mapoteng.html"><i class="fa fa-globe">  PROGRAMS</i></a>
+			<ul>
+				<li><a href="format.html">Interaction_Design</a></li>
+				<li><a href="format1.html">Data_Warehouse</a></li>
+				<li><a href="format2.html">Software_Engineering</a></li>
+				<li><a href="format3.html">Discrete_Maths</a></li>
+				<li><a href="format4.html">Java_Programming_2</a></li>
+			</ul>
+			</li>
+		<li><a href="lesotho.html"><i class="fa fa-book"> BOOKS</i></a></li>
+		<li><a href="about.html"><i class="fa fa-group"> About</i></a></li>
+	</ul>
+	    <div class="logo">
+    <img src="limks.png" width="120" height="50">
+    
+	</nav>
+
+	</div>
+	
+	<br><br>
+	<center><h1><font size="25px"><abbr title="LUCT LESOTHO VIDEO CONFERENCING">CHANGING THE LIFE, CHANGING THE WORLD</abbr></font></h1></center>
+	
+
+       
+      
+<br><br>
+<blockquote><h3>
+	<p class="g"><u>Designed for: <font size="3px">LUCT</font></u></p>
+	<ul>
+
+<li class="g">Lectures teaching</li>
+<li class="g">Student learning </li>
+<li class="g">Other Groups </li>
+</ul>
+</h3>
+<marquee scroll="left" width="460px">
+	<p><h2>
+		<font color="white">Change Your Life, Change The World</font></p>
+	</h2></p>
+	</marquee>
+</blockquote>
+
+
+<div class="footer">
+  <b><a href="mapoteng.html"><button>LOGIN</button></a></b>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>
